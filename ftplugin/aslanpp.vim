@@ -1,8 +1,8 @@
-vnoremap <buffer> <localleader>c :call RemoveBlankLines()<cr>
-nnoremap <buffer> <localleader>c :<c-u>call CommentOperator(getpos('.')[1])<cr>
+vnoremap <buffer> <localleader>c :call CommentLine()<cr>
+nnoremap <buffer> <localleader>c :<c-u>call CommentLines(getpos('.')[1])<cr>
 
 
-function! CommentOperator(line)
+function! CommentLines(line)
 		"execute ":".getpos(a:line)[1]
 		execute ":".a:line
 			let old_unnamed = @@
@@ -22,11 +22,11 @@ function! CommentOperator(line)
 
 endfunction
 
-function! RemoveBlankLines() range
+function! CommentLine() range
 		let f_line = a:firstline
 		let l_line = a:lastline
 		while f_line <=# l_line
-				call CommentOperator(f_line)
+				call CommentLines(f_line)
 				let f_line += 1
 		endwhile
 "	execute f_line . "," . l_line ."s/^/%"
