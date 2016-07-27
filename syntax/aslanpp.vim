@@ -15,7 +15,7 @@ highlight link aslanppBool Boolean
 syntax match aslanppOperator "\v\*-\>\*"
 highlight link aslanppOperator Operator
 
-syntax match aslanppIdentifier "\v\?\w+"
+syntax match aslanppIdentifier "\v\?\w*"
 highlight link aslanppIdentifier Identifier
 
 syntax keyword aslanppRepeat while
