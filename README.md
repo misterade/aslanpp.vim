@@ -9,5 +9,5 @@ Features:
 * snippets
 
 ## Snippet
-The snippet is to be used with the snipmate plugin.
+The snippet is meant to be used with the snipmate plugin.
 <https://github.com/garbas/vim-snipmate>
