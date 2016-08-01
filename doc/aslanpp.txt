@@ -16,6 +16,7 @@ CONTENTS                                                    *Contents*
 
     1. Usage ................ |Usage|
     2. Mappings ............. |Mappings|
+		3. Snippets ............. |Snippets|
     3. License .............. |License|
 
 ==============================================================================
@@ -24,6 +25,41 @@ MAPPINGS                                                          *Mappings*
 <LocalLeader>c
 		Toogle comment for the current line. Also works in visual mode 
 		when toggling multiple lines.
+
+==============================================================================
+SNIPPETS                                                          *Snippets*
+
+
+select<tab>
+select{ on(${1}):{
+		${2}
+	}
+}
+
+on<tab>
+on(${1}):{
+	${2}
+}
+
+while<tab>
+while(true){
+	${1}
+}
+
+body<tab>
+body{
+	${1}
+}
+
+entity<tab>
+entity ${1:Entity_name} {
+	${2}
+}
+
+entity1<tab>
+entity ${1:Entity_name} (${2}){
+	${3}
+}<Paste>
 
 ==============================================================================
 LICENSE                                                            *License*
